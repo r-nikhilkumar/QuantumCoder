@@ -6,8 +6,8 @@ from django.contrib import messages
 def index(request):
     inst = user_contact_details.objects.all()
     context = {
-        "name1" : inst[0].name,
-        "name2" : inst[1].name,
+        "name1" : inst[1].name,
+        "name2" : inst[0].name,
     }
             
     return render(request, "index.html",context)
