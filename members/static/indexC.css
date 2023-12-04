@@ -1,0 +1,54 @@
+.cardsParent{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+ .btt{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+ }
+
+.cards {
+    width: 26vmax;
+    border-radius: 15px;
+    padding: 1.5rem;
+    margin: 1em;
+    background: white;
+    align-items: flex-end;
+    transition: 0.4s ease-out;
+    box-shadow: 0px 7px 10px rgba(0, 0, 0, 0.5);
+}
+
+.d-block:hover{
+    transition: all .2s ease-in-out;
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+
+.cards:hover {
+    transform: translateY(20px);
+}
+
+.cards:hover:before {
+    opacity: 1;
+}
+ 
+.arrowButton:hover {
+    transition: all .2s ease-in-out;
+    transform: scale(1.18);
+    cursor: pointer;
+}
+
+
+.proImg{
+    transform: scale(calc(1 + .2*var(--hl)));
+    filter: brightness(calc(.6*(1 + var(--hl))));
+    transition: .7s;
+}
+
+.proImg:hover{
+    --hl: 1;
+}

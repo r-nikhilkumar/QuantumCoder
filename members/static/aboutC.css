@@ -1,0 +1,103 @@
+.Attractivebutton {
+    position: relative;
+    padding: 20px 50px;
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: center;
+    width: 30vmin;
+    overflow: hidden;
+    border-radius: 40px;
+  }
+  
+.cardsParent{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+  .Attractivebutton .attractiveSpanButton {
+    position: relative;
+    color: #a54040;
+    text-align: center;
+    font-size: 0.8rem;
+    font-family: Arial;
+    letter-spacing: 2px;
+    z-index: 1;
+  }
+  
+  .Attractivebutton .liquid {
+    position: absolute;
+    top: -10vmin;
+    left: 0;
+    width: 30vmin;
+    height: 35vmin;
+    background: #4973ff;
+    box-shadow: inset 0 0 7vmin rgba(0, 0, 0, .5);
+    transition: .5s;
+  }
+  
+  .Attractivebutton .liquid::after,
+  .Attractivebutton .liquid::before {
+    content: '';
+    width: 200%;
+    height: 200%;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -75%);
+    background: #000;
+  }
+  
+  .Attractivebutton .liquid::before {
+    
+    border-radius: 45%;
+    background: rgba(20, 20, 20, 1);
+    animation: animate 5s linear infinite;
+  }
+  
+  .Attractivebutton .liquid::after {
+    
+    border-radius: 40%;
+    background: rgba(20, 20, 20, .5);
+    animation: animate 10s linear infinite;
+  }
+  
+  .Attractivebutton:hover .liquid{
+    top: -120px;
+  }
+  
+  @keyframes animate {
+    0% {
+      transform: translate(-50%, -75%) rotate(0deg);
+    }
+    100% {
+      transform: translate(-50%, -75%) rotate(360deg);
+    }
+  }
+
+   
+.cards {
+    width: 55vmin;
+    border-radius: 15px;
+    padding: 2vmin;
+    margin: 3vmin;
+    background: rgb(60, 29, 29);
+    transition: 0.4s ease-out;
+    box-shadow: 0px 7px 10px rgba(0, 0, 0, 0.5);
+}
+
+.dIcon:hover{
+    transition: all .2s ease-in-out;
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+
+.cards:hover {
+    transform: translateY(20px);
+}
+
+.cards:hover:before {
+    opacity: 1;
+}
